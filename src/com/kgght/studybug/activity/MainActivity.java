@@ -1,4 +1,6 @@
-package com.kgght.studybug;
+package com.kgght.studybug.activity;
+
+import com.kgght.studybug.R;
 
 import android.os.Bundle;
 import android.app.Activity;
