@@ -12,6 +12,8 @@
     <string name="select_pic_button">Select Picture</string>
     <string name="demo_pic_button">Demo Picture</string>
     <string name="save_button">Save</string>
+    <string name="answer">Answer</string>
+    <string name="question">Question</string>
     
     
     <string-array name="subject_array">
