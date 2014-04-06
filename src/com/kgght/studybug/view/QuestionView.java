@@ -52,11 +52,16 @@ public class QuestionView extends View{
 				//Log.d("Size", Boolean.toString(com.kgght.studybug.objects.PreTest.myTest.getPicList().isEmpty()));
 				try{ questionPic = com.kgght.studybug.objects.PreTest.myTest.getPicList().get(com.kgght.studybug.objects.PreTest.qNum);
 				} catch ( IndexOutOfBoundsException e ) {
+					try { questionFlip = com.kgght.studybug.objects.PreTest.myTest.getFlipList().get(com.kgght.studybug.objects.PreTest.qNum);
+						com.kgght.studybug.objects.PreTest.flipq=true;
+							} catch ( IndexOutOfBoundsException E ){
 					new AlertDialog.Builder(myContext)
 				    .setTitle("Test Over!")
 				    //.setMessage("?")
 				    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				        public void onClick(DialogInterface dialog, int whichButton) {
+				        	com.kgght.studybug.objects.PreTest.qNum = 0;
+				        	com.kgght.studybug.objects.PreTest.flipq = false;
 				        	Intent createIntent = new Intent(myContext, com.kgght.studybug.activity.CreateScreen.class);
 							myContext.startActivity(createIntent);
 				        }
@@ -64,7 +69,7 @@ public class QuestionView extends View{
 				    ).show();
 					
 				}
-				
+				}
 			}
 			else{
 				Log.d("Test", "Got here.");
@@ -75,6 +80,8 @@ public class QuestionView extends View{
 				    //.setMessage("?")
 				    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				        public void onClick(DialogInterface dialog, int whichButton) {
+				        	com.kgght.studybug.objects.PreTest.qNum = 0;
+				        	com.kgght.studybug.objects.PreTest.flipq = false;
 				        	Intent createIntent = new Intent(myContext, com.kgght.studybug.activity.CreateScreen.class);
 							myContext.startActivity(createIntent);
 				        }

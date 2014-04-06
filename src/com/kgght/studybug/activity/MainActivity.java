@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 	 
 		addListenerOnButton();
-		addListenerOnSpinnerItemSelection();
+		//addListenerOnSpinnerItemSelection();
 	  }
 	 
 	  // add items into spinner dynamically
@@ -50,11 +50,6 @@ public class MainActivity extends Activity {
 	 
 		  @Override
 		  public void onClick(View v) {
-			/*  
-		    Toast.makeText(MainActivity.this,
-			"OnClickListener : " + 
-	                "\nSpinner 1 : "+ String.valueOf(spinner1.getSelectedItem()), 
-				Toast.LENGTH_SHORT).show();*/
 			if (String.valueOf(spinner1.getSelectedItem()).equals("New Subject") ){
 				Intent createIntent = new Intent(getApplicationContext(), CreateScreen.class);
 				startActivity(createIntent);
