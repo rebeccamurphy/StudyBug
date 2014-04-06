@@ -46,6 +46,12 @@ public class DemoView extends View {
 	private int pointY2;
 	private float radius;
 	
+	private int tlX;
+	private int tlY;
+	private int brX;
+	private int brY; 
+	
+	
 	
 	 public DemoView(Context context) {
 		super(context);
@@ -101,6 +107,21 @@ public class DemoView extends View {
 				canvas.drawLine(pointX1, pointY1, pointX1, pointY2, redPaint);
 				canvas.drawLine(pointX2, pointY1, pointX2, pointY2, redPaint);
 				
+				if (pointX1 < pointX2 && pointY1 < pointY2 ){
+					//topleft bottom right
+					tlX = pointX1;
+					tlY = pointY1;
+					brX = pointX2;
+					brY = pointY2;
+				}
+				else{
+					tlX = pointX2;
+					tlY = pointY2;
+					brX = pointX1;
+					brY = pointY1;
+				}
+					
+				
 			}
 
 	 }
@@ -125,9 +146,10 @@ public class DemoView extends View {
 				        public void onClick(DialogInterface dialog, int whichButton) {
 				            Editable value = input.getText(); 
 				            pic.setQuestion(value.toString());
-				            pic.setActiveArea(pointX1, pointY1, pointX2, pointY2);
-							pic.setBitmap(demoPic);
-							com.kgght.studybug.view.TitleView.myTest.add(pic);
+				            pic.setActiveArea(tlX,tlY, brX, brY);
+				            pic.setBitmap(demoPic);
+							com.kgght.studybug.objects.PreTest.myTest.add(pic);
+							Log.d("Size", Boolean.toString(com.kgght.studybug.objects.PreTest.myTest.getPicList().isEmpty()));
 							Toast.makeText(myContext,
 									"Saved!", Toast.LENGTH_SHORT).show();
 							Intent createIntent = new Intent(myContext, com.kgght.studybug.activity.CreateScreen.class);

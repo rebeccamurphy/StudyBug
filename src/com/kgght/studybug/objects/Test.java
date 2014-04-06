@@ -11,6 +11,10 @@ public class Test {
 		picturesList = new ArrayList<Picture>();
 		flipCardList = new ArrayList<FlipCard>();
 	}
+	public Test(Test oldTest){
+		flipCardList = oldTest.getFlipList();
+		picturesList = oldTest.getPicList();
+	}
 	
 	public void add(Picture pic){
 		picturesList.add(pic);
@@ -20,6 +24,13 @@ public class Test {
 		flipCardList.add(card);
 	}
 	
+	public ArrayList<Picture> getPicList(){
+		return picturesList;
+	}
+	
+	public ArrayList<FlipCard> getFlipList(){
+		return flipCardList;
+	}
 
 
 }

@@ -18,7 +18,6 @@ import com.kgght.studybug.objects.Test;
 
 public class TitleView extends View {
 
-	public static Test myTest;
 	private Context myContext;
 	private int screenW;
 	private int screenH;
@@ -34,7 +33,6 @@ public class TitleView extends View {
 		super(context);
 		myContext = context;
 		
-		myTest= new Test();
 		scale = myContext.getResources().getDisplayMetrics().density;
 		
 		screenH = myContext.getResources().getDisplayMetrics().heightPixels;
