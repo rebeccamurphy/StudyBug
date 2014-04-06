@@ -9,6 +9,8 @@
     <string name="hello_world">Hello World</string>
     <string name="subject_prompt">Choose a Subject</string>
     <string name="submit_button">Submit</string>
+    <string name="select_pic_button">Select Picture</string>
+    <string name="demo_pic_button">Demo Picture</string>
     
     
     <string-array name="subject_array">

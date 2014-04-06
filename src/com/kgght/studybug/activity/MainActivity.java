@@ -6,9 +6,11 @@ import com.kgght.studybug.R;
 
 import com.kgght.studybug.objects.CustomOnItemSelectedListener;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,11 +50,15 @@ public class MainActivity extends Activity {
 	 
 		  @Override
 		  public void onClick(View v) {
-	 
+			/*  
 		    Toast.makeText(MainActivity.this,
 			"OnClickListener : " + 
 	                "\nSpinner 1 : "+ String.valueOf(spinner1.getSelectedItem()), 
-				Toast.LENGTH_SHORT).show();
+				Toast.LENGTH_SHORT).show();*/
+			if (String.valueOf(spinner1.getSelectedItem()).equals("New Subject") ){
+				Intent createIntent = new Intent(getApplicationContext(), CreateScreen.class);
+				startActivity(createIntent);
+			}
 		  }
 	 
 		});
