@@ -121,7 +121,8 @@ public class DemoView extends View {
 					brY = pointY1;
 				}
 					
-				
+				Log.d("Active Area", "(" + Integer.toString(tlX) + ", " + Integer.toString(tlY) + ") ("  
+						+ Integer.toString(brX) + ", " + Integer.toString(brY) + ")");
 			}
 
 	 }
@@ -175,7 +176,7 @@ public class DemoView extends View {
 					pointY2 = Y;
 					selectionComplete = true;
 				}
-				else if (X >200){
+				else if (X < screenH -200){
 					pointX1 = X;
 					pointY1 = Y;
 					selectionPartial = true;

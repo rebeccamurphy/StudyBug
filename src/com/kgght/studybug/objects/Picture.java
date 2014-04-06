@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 
 public class Picture {
 	
+	//should probably be renamed because it overlaps with android package
+	
 	private ActiveArea activeArea;
 	private Bitmap bmp;
 	private String Question;

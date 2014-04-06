@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class QuestionView extends View{
+	
 
 	private Context myContext;
 	private Test preTest;
@@ -54,6 +55,7 @@ public class QuestionView extends View{
 				} catch ( IndexOutOfBoundsException e ) {
 					try { questionFlip = com.kgght.studybug.objects.PreTest.myTest.getFlipList().get(com.kgght.studybug.objects.PreTest.qNum);
 						com.kgght.studybug.objects.PreTest.flipq=true;
+						com.kgght.studybug.objects.PreTest.qNum+=1;
 							} catch ( IndexOutOfBoundsException E ){
 					new AlertDialog.Builder(myContext)
 				    .setTitle("Test Over!")

@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
 	  // add items into spinner dynamically
 	  
 	  public void addListenerOnSpinnerItemSelection() {
+		  //shows toast of item selected
 		spinner1 = (Spinner) findViewById(R.id.spinner1);
 		spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
 	  }
