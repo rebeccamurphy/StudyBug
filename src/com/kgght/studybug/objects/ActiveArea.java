@@ -25,6 +25,12 @@ public class ActiveArea {
 		botright =br;
 	}
 	
+	public void setActiveArea(int x1,int y1, int x2, int y2){
+		topleft[0] = x1;
+		topleft[1] = y1;
+		botright[0] = x2;
+		botright[1] =y2;
+	}
 	public int[] getTL(){
 		return topleft;
 	}
@@ -63,5 +69,9 @@ public class ActiveArea {
 		return false;
 		
 	}
-	
+	public String toString(){
+		return "Top Left: (" + Integer.toString(getTLX()) + ", " +  Integer.toString(getTLY()) + ") Bottom Right: ( "+
+				 Integer.toString(getBRX()) + ", " +  Integer.toString(getBRY()) + ").";
+		
+	}
 }

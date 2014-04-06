@@ -19,7 +19,7 @@ public class CreatePicture extends Activity{
 	 @Override
 	  public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.create_picture);
 	 
 		addListenerOnButton();
 	  }
@@ -34,11 +34,8 @@ public class CreatePicture extends Activity{
 				
 			    Toast.makeText(CreatePicture.this,
 				"Feature not yet completed.", Toast.LENGTH_SHORT).show();
-			  }  /*
-				if (String.valueOf(spinner1.getSelectedItem()).equals("New Subject") ){
-				Intent createIntent = new Intent(getApplicationContext(), CreateScreen.class);
-				startActivity(createIntent);
-			}*/
+			   
+			}
 		 
 			});
 			
@@ -47,7 +44,7 @@ public class CreatePicture extends Activity{
 		 
 			  @Override
 			  public void onClick(View v) {
-						Intent createIntent = new Intent(getApplicationContext(), CreateScreen.class);
+						Intent createIntent = new Intent(getApplicationContext(), DemoPicture.class);
 						startActivity(createIntent);
 			     
 			  }

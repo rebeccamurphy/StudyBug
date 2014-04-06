@@ -18,7 +18,7 @@ import com.kgght.studybug.objects.Test;
 
 public class TitleView extends View {
 
-	Test myTest;
+	public static Test myTest;
 	private Context myContext;
 	private int screenW;
 	private int screenH;
